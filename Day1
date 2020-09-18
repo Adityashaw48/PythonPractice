@@ -1,0 +1,13 @@
+#factorial of a number
+def fac(n):
+    fact=1
+    if n==1:
+        pass
+    else:
+        for i in range(2,n+1):
+            fact=fact*i
+    print(fact)
+a=int(input())
+fac(a)
+
+            
