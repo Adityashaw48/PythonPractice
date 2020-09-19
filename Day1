@@ -10,4 +10,50 @@ def fac(n):
 a=int(input())
 fac(a)
 
-            
+#Armstrong Number: Sum of power of digits of number is equal to number
+
+def ordr(n): #To caculate order of number
+    v=0
+    while n!=0:
+        v=v+1
+        n=n//10
+    return v
+def power(a,b): # To calculate power 
+    if a==1 or b==0:
+        return 1
+    return a**b
+def isArmStrong(x):
+    sum1=0
+    b=ordr(x)
+    temp=x
+    while(temp!=0):
+        a=temp%10
+        sum1=sum1+power(a,b)
+        temp=temp//10
+    if sum1==x:
+        print('Its an Armstrong Number')
+    else:
+        print('Its not an Armstrong Number')
+        
+        
+#Print All prime numbers in an interval
+
+ def isPrime(n):
+    cnt=0
+    if n==1:
+        True
+    else:
+        for i in range(2,(n//2)+1):
+            if n%i==0:
+                return False
+    return True
+        
+l=[]
+for i in range(2,200):
+    if isPrime(i)==True:
+        l.append(i)
+print((l))             
+
+
+
+
